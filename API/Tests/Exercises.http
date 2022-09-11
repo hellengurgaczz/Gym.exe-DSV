@@ -1,0 +1,30 @@
+###
+
+POST http://localhost:5179/api/exercises
+Content-Type: application/json
+
+{
+   "exercise_name": "Treino de braço",
+   "exercise_repetition": 1,
+   "exercise_desc": "bla bla bla",
+   "exercise_status": true
+}
+
+###
+GET http://localhost:5179/api/exercises
+
+###
+PUT http://localhost:5179/api/exercises
+Content-Type: application/json
+
+{
+   "id": "c535eff7-caeb-45bd-994a-bed63a14b8af",
+   "exercise_name": "Treino de braço alterado",
+   "exercise_repetition": 1,
+   "exercise_desc": "bla bla bla",
+   "exercise_status": true
+}
+
+###
+
+DELETE http://localhost:5179/api/exercises/c535eff7-caeb-45bd-994a-bed63a14b8af

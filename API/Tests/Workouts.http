@@ -1,0 +1,32 @@
+###
+
+POST http://localhost:5179/api/workouts
+Content-Type: application/json
+
+{
+   "workout_name": "Treino de braço",
+   "workout_frequency": 1,
+   "workout_desc": "bla bla bla",
+   "workout_recommendation": "todas as idades",
+   "workout_status": true
+}
+
+###
+GET http://localhost:5179/api/workouts
+
+###
+PUT http://localhost:5179/api/workouts
+Content-Type: application/json
+
+{
+   "id": "bfdea8b3-8ecd-414e-9c46-7e6f6aaa8298",
+   "workout_name": "Treino de braço alterado",
+   "workout_frequency": 1,
+   "workout_desc": "bla bla bla",
+   "workout_recommendation": "todas as idades",
+   "workout_status": true
+}
+
+###
+
+DELETE http://localhost:5179/api/workouts/bfdea8b3-8ecd-414e-9c46-7e6f6aaa8298
