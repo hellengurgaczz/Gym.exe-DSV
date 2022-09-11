@@ -27,7 +27,7 @@ namespace API.Controllers
         
         private Exercise getById(Guid id)
         {
-            Exercise exercise = _context.Exercises.Find(id);
+            Exercise? exercise = _context.Exercises.Find(id);
             return exercise;
             
         }
