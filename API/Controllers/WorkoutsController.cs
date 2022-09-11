@@ -24,10 +24,17 @@ namespace API.Controllers
         [HttpGet]
         public List<Workout> List() => _context.Workouts.ToList(); 
         
+        private Workout getById(Guid id)
+        {
+            Workout? workout = _context.Workouts.Find(id);
+            return workout;
+            
+        }
+
         [HttpPut]
         public IActionResult Update( [FromBody] Workout newWorkout)
         {
-            Workout workout = _context.Workouts.Find(newWorkout.id);
+            Workout? workout = getById(newWorkout.id);
 
             if(workout == null) {
                 return NotFound();
@@ -47,7 +54,7 @@ namespace API.Controllers
         [Route("{id}")]
         public IActionResult Delete( [FromRoute] Guid id)
         {
-            Workout workout = _context.Workouts.Find(id);
+            Workout workout = getById(id);
 
             if(workout == null) {
                 return NotFound();
