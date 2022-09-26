@@ -41,6 +41,7 @@ namespace API.Controllers
             }
 
             exercise.exercise_name = newExercise.exercise_name;
+            exercise.id_workout = newExercise.id_workout;
             exercise.exercise_desc = newExercise.exercise_desc;
             exercise.exercise_repetition = newExercise.exercise_repetition;
             exercise.exercise_status = newExercise.exercise_status;

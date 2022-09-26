@@ -13,6 +13,7 @@ namespace API.Models
         }
             
         public Guid id { get; set; }
+        public Guid id_workout { get; set; }
         public string? exercise_name { get; set; }
         public int? exercise_repetition { get; set; }
         public string? exercise_desc { get; set; }

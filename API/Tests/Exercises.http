@@ -5,6 +5,7 @@ Content-Type: application/json
 
 {
    "exercise_name": "Treino de braço",
+   "id_workout": "",
    "exercise_repetition": 1,
    "exercise_desc": "bla bla bla",
    "exercise_status": true
@@ -19,6 +20,7 @@ Content-Type: application/json
 
 {
    "id": "c535eff7-caeb-45bd-994a-bed63a14b8af",
+   "id_workout": "",
    "exercise_name": "Treino de braço alterado",
    "exercise_repetition": 1,
    "exercise_desc": "bla bla bla",
