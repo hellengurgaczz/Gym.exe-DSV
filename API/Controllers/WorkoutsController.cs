@@ -63,6 +63,8 @@ namespace API.Controllers
             _context.Workouts.Remove(workout);
             _context.SaveChanges();
             return Ok();
+            
+            
         }
     }
 
