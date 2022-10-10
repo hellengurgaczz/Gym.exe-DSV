@@ -47,6 +47,7 @@ namespace API.Controllers
             exercise.exercise_status = newExercise.exercise_status;
 
             _context.SaveChanges();
+            
             return Ok();
         }
 
@@ -60,8 +61,11 @@ namespace API.Controllers
                 return NotFound();
             }
 
+
             _context.Exercises.Remove(exercise);
+            
             _context.SaveChanges();
+            
             return Ok();
         }
     }
