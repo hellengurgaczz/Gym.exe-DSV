@@ -10,6 +10,10 @@ builder.Services.AddDbContext<DataContext>
     options => options.UseInMemoryDatabase("database")
 );
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
